@@ -1,0 +1,25 @@
+/*Contar el número de ocurrencias de un elemento en un arreglo usando
+puntero y funciones*/
+#include<stdio.h>
+int vec[5], i, busqueda, cont;
+void ocurrencia (int *vec,int *cont);
+main()
+{
+    for(i=0; i<5;i++){
+    printf("Ingrese los numeros \n");
+    scanf("%d", &vec[i]);
+}
+printf("¿Que numero desea buscar? \n");
+    scanf("%d", &busqueda);
+        ocurrencia (vec, &cont);
+            printf("El numero se encontro %d veces", cont);
+}
+void ocurrencia (int *vec,int *cont)
+{
+    for(i=0; i<5; i++)
+    {
+        if(vec[i]==busqueda){
+            (*cont)++;
+        }
+    }
+}
