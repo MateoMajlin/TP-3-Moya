@@ -1,0 +1,25 @@
+/*Encontrar la suma y el promedio de los elementos de un arreglo usando
+punteros y funciones*/
+#include<stdio.h>
+int nums[5],i,suma;
+float prom;
+void sumaprom(int *suma,float *prom);
+main()
+{
+	for(i=0;i<5;i++)
+	{
+		printf("num %d:",i+1);
+		scanf("%d",&nums[i]);
+	}
+	sumaprom(&suma,&prom);
+	printf("Suma = %d\n", suma);
+	printf("Prom = %.2f\n", prom);	
+}
+void sumaprom(int *suma,float *prom)
+{
+	for(i=0;i<5;i++)
+	{
+		*suma = *suma + nums[i];
+	}
+	*prom = (float)*suma / 5;
+}
