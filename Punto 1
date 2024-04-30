@@ -1,0 +1,16 @@
+/*Intercambio*/
+#include<stdio.h>
+int x = 10, y = 30,aux;
+void intercambio(int *a,int *b);
+main()
+{
+	printf("x = %d, y = %d\n",x,y);
+	intercambio(&x,&y);
+	printf("x = %d, y = %d\n",x,y);
+}
+void intercambio(int *a,int *b)
+{
+	aux = *a;
+	*a = *b;
+	*b = aux;
+}
